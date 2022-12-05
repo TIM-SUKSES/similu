@@ -25,7 +25,7 @@
         <form action="<?php echo site_url('auth/login'); ?>" method="post">
             <div class="form-group">
                 <label for="nik" class="text-secondary">NIK *</label>
-                <input type="password" name="nik" id="nik" class="form-control" required>
+                <input type="text" name="nik" id="nik" class="form-control" required>
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
         </form>

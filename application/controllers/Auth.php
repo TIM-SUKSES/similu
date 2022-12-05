@@ -3,10 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Auth extends CI_Controller{
 
-    public function __construct(){
-        parent::__construct();
-        $this->load->library('form_validation');
-    }
 
     public function index(){
         $data['title'] = 'Auth';
@@ -19,16 +15,15 @@ class Auth extends CI_Controller{
         $cek_nik = $this->db->get_where('user', ['nik' => $this->input->post('nik', true)])->row();
 
         if ($cek_nik){
-            if(password_verify($this->input->post('nik'), $cek_nik->nik)){
+            if($this->input->post('nik')){
                 if ($cek_nik->level == 'admin'){
-                    
                     $data_session = [
                          'id_masyarakat' => $cek_nik->id_masyarakat,
                          'level' => $cek_nik->level,
                      ];
-                     $this->session->set_userdata($data_session);
-                     echo $this->session->userdata('level');
-                     echo "admin";
+                    
+                    $this->session->set_userdata($data_session);
+                    redirect("admin/Dashboard");
                 } else {
                     echo "masyarakat";
                 }
