@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2022 at 03:07 PM
+-- Generation Time: Dec 05, 2022 at 07:40 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -20,27 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `similu`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id_admin` int(11) NOT NULL,
-  `username` varchar(128) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `id_roles` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`id_admin`, `username`, `password`, `id_roles`) VALUES
-(1, 'wandesay75', 'suebae1000', 1),
-(2, 'nabilmuthi77', '1234', 2);
 
 -- --------------------------------------------------------
 
@@ -63,30 +42,6 @@ INSERT INTO `capres` (`id_calon`, `nama_calon`, `partai`) VALUES
 (2, 'Genji Pranowo', 'logo_partai.jpg'),
 (3, 'Prauwu Subianto', 'logo_partai.jpg'),
 (4, 'Anas Buswedan', 'logo_partai.jpg');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `masyarakat`
---
-
-CREATE TABLE `masyarakat` (
-  `id_masyarakat` int(11) NOT NULL,
-  `nama` varchar(128) NOT NULL,
-  `nik` char(16) NOT NULL,
-  `tanggal_input` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `masyarakat`
---
-
-INSERT INTO `masyarakat` (`id_masyarakat`, `nama`, `nik`, `tanggal_input`) VALUES
-(1, 'Alvin Austin', '12210247', '2022-12-01'),
-(2, 'Fadly Faturrohman', '12211208', '2022-12-01'),
-(3, 'Raihan Ramadhan', '12211125', '2022-12-01'),
-(4, 'Yusup Supriatna', '12210740', '2022-12-01'),
-(5, 'Nabil Muthi Maulani', '12210365', '2022-12-01');
 
 -- --------------------------------------------------------
 
@@ -119,27 +74,42 @@ CREATE TABLE `suara` (
   `jumlah_suara` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id_masyarakat` int(11) NOT NULL,
+  `nama` varchar(128) NOT NULL,
+  `nik` char(16) NOT NULL,
+  `tanggal_input` date NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
+  `level` enum('admin','masyarakat') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_masyarakat`, `nama`, `nik`, `tanggal_input`, `status`, `level`) VALUES
+(1, 'Alvin Austin', '12210247', '2022-12-01', 0, 'masyarakat'),
+(2, 'Fadly Faturrohman', '12211208', '2022-12-01', 0, 'masyarakat'),
+(3, 'Raihan Ramadhan', '12211125', '2022-12-01', 0, 'masyarakat'),
+(4, 'Yusup Supriatna', '12210740', '2022-12-01', 0, 'masyarakat'),
+(5, 'Nabil Muthi Maulani', '12210365', '2022-12-01', 0, 'masyarakat'),
+(6, 'bawaslu', '081294684656', '2022-12-05', 0, 'admin');
+
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`id_admin`);
 
 --
 -- Indexes for table `capres`
 --
 ALTER TABLE `capres`
   ADD PRIMARY KEY (`id_calon`);
-
---
--- Indexes for table `masyarakat`
---
-ALTER TABLE `masyarakat`
-  ADD PRIMARY KEY (`id_masyarakat`);
 
 --
 -- Indexes for table `roles`
@@ -154,26 +124,20 @@ ALTER TABLE `suara`
   ADD PRIMARY KEY (`id_pasangan`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indexes for table `user`
 --
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id_masyarakat`);
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT for dumped tables
 --
-ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `capres`
 --
 ALTER TABLE `capres`
   MODIFY `id_calon` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `masyarakat`
---
-ALTER TABLE `masyarakat`
-  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -186,6 +150,12 @@ ALTER TABLE `roles`
 --
 ALTER TABLE `suara`
   MODIFY `id_pasangan` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
