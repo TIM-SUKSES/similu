@@ -1,0 +1,31 @@
+<div class="text-center">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#1d1d1d"
+          fill-opacity="10"
+          d="M0,96L48,122.7C96,149,192,203,288,192C384,181,480,107,576,80C672,53,768,75,864,101.3C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+<footer>
+    <img class="logo2" src="<?php echo base_url('assets/img/Logo SIMILU transparan.png'); ?>">
+    <p class="font-weight-bold text-center"> Copyright ©2022 SIMILU All Rights Reserved. </p>
+</footer>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="<?php echo base_url('assets/'); ?>js/jquery-3.3.1.slim.min.js"></script>
+<script src="<?php echo base_url('assets/'); ?>js/popper.min.js"></script>
+<script src="<?php echo base_url('assets/'); ?>js/bootstrap.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $('.nav-active').on('click', function(){
+    $('.nav-active').removeClass('active');
+    $(this).addClass('active');
+  });
+});
+</script>
+
+    
+</body>
+</html>

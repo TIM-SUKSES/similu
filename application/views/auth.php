@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="welcome display-4">Selamat Datang <br> di website SIMILU</h2>
+            <p class="welcome2">Silahkan login menggunakan NIK yang sudah terdaftar pada E-KTP <br> harap masyarakat sudah melakukan pendaftaran sensus penduduk. </p>
+            <a href="" class="btn btn-primary" data-toggle="modal" data-target="#modalLogin"> Login / Masuk </a>
+        </div>
+        <div class="col-md-6">
+            <img src="<?php echo base_url('assets/img/Logo SIMILU2.png'); ?>" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Masukkan NIK Anda!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="<?php echo site_url('auth/login'); ?>" method="post">
+            <div class="form-group">
+                <label for="nik" class="text-secondary">NIK *</label>
+                <input type="password" name="nik" id="nik" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
