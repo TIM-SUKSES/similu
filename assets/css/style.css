@@ -1,0 +1,53 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+    background-color: #ff5757;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar{
+    min-height: 80px;
+    background-color:  #ff5757;
+}
+
+.active{
+    color: #fefefe !important;
+    border-bottom: 3px solid #fefefe;
+}
+
+.welcome{
+    margin-top: 100px;
+    color: #fefefe;
+    font-style: italic;
+}
+
+.welcome2{
+    color: #e9e5e5;
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+}
+
+.logo2{
+    width: 250px;
+    height: auto;
+    
+}
+
+footer{
+    min-height: 50px;
+    color:#fefefe;
+    padding: 5px;
+    background-color: #1d1d1d;
+}
+
+footer p{
+    margin-bottom: 50px;
+}
