@@ -25,7 +25,7 @@ class Auth extends CI_Controller{
                      ];
                     
                     $this->session->set_userdata($data_session);
-                    redirect("admin/Dashboard");
+                    redirect("admin/dashboard");
                 } else {
                     echo "masyarakat";
                 }

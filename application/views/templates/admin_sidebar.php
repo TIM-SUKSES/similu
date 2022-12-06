@@ -15,12 +15,38 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">Menu Admin</li>
-        <li class="treeview">
+        <li class="<?php echo $this->uri->segment(2) == 'dashboard' ? 'active' : '' ?> ">
           <a href="<?php echo site_url('admin/dashboard'); ?>">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="<?php echo $this->uri->segment(2) == 'datamasyarakat' ? 'active' : '' ?> ">
+          <a href="<?php echo site_url('admin/datamasyarakat'); ?>">
+            <i class="fa fa-group"></i> <span>Data Masyarakat</span>
+          </a>
+        </li>
+        <li class="<?php echo $this->uri->segment(2) == 'presiden' ? 'active' : '' ?> ">
+          <a href="<?php echo site_url('admin/presiden'); ?>">
+            <i class="fa fa-user"></i> <span>Data Presiden</span>
+          </a>
+        </li>
+        <li class="<?php echo $this->uri->segment(2) == 'visi_misi' ? 'active' : '' ?> ">
+          <a href="<?php echo site_url('admin/visi_misi'); ?>">
+            <i class="fa fa-id-card"></i> <span>Visi & Misi</span>
+          </a>
+        </li>
+        <li class="<?php echo $this->uri->segment(2) == 'suara' ? 'active' : '' ?> ">
+          <a href="<?php echo site_url('admin/suara'); ?>">
+            <i class="fa fa-envelope-open"></i> <span>Suara</span>
+          </a>
+        </li>
+        <li class="<?php echo $this->uri->segment(2) == 'logout' ? 'active' : '' ?> ">
+          <a href="<?php echo site_url('auth/logout'); ?>">
+            <i class="fa fa-sign-out"></i> <span>Logout</span>
           </a>
         </li>
       </ul>
     </section>
     <!-- /.sidebar -->
   </aside>
+<div class="content-wrapper">

@@ -3,7 +3,7 @@
         <div class="col-md-6">
             <h2 class="welcome display-4">Selamat Datang <br> di website SIMILU</h2>
             <p class="welcome2">Silahkan login menggunakan NIK yang sudah terdaftar pada E-KTP <br> harap masyarakat sudah melakukan pendaftaran sensus penduduk. </p>
-            <a href="" class="btn btn-primary" data-toggle="modal" data-target="#modalLogin"> Login / Masuk </a>
+            <a href="" class="btn btn-light" data-toggle="modal" data-target="#modalLogin"> Login / Masuk </a>
         </div>
         <div class="col-md-6">
             <img src="<?php echo base_url('assets/img/Logo SIMILU2.png'); ?>" class="img-fluid">
