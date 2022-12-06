@@ -19,6 +19,8 @@ class Auth extends CI_Controller{
                 if ($cek_nik->level == 'admin'){
                     $data_session = [
                          'id_masyarakat' => $cek_nik->id_masyarakat,
+                         'nama' => $cek_nik->nama,
+                         'tanggal_input' => $cek_nik->tanggal_input,
                          'level' => $cek_nik->level,
                      ];
                     
