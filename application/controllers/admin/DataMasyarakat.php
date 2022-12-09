@@ -29,6 +29,18 @@ class Datamasyarakat extends CI_Controller{
         $this->load->view('templates/admin_footer');
     }
 
+    public function simpan(){
+        $this->MasyarakatModel->simpan();
+        if ($this->db->affected_rows() > 0){
+            $this->session->set_flashdata('message', '
+            <div class="alert alert-warning alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <h4><i class="icon fa fa-warning"></i> Data Telah disimpan! </h4>
+            </div>');
+            redirect('admin/datamasyarakat');
+        }
+    }
+
     public function hapus($id_masyarakat){
         $this->db->delete('user', ['id_masyarakat' => $id_masyarakat]);
         if ($this->db->affected_rows() > 0){
@@ -36,7 +48,7 @@ class Datamasyarakat extends CI_Controller{
             <div class="alert alert-warning alert-dismissible">
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <h4><i class="icon fa fa-warning"></i> Data Telah Terhapus! </h4>
-              </div>');
+            </div>');
             redirect('admin/datamasyarakat');
         }
     }
