@@ -15,7 +15,7 @@
           <tr>
             <td>
               <div class="form-group">
-                <label for="nama">Nama *</label>
+                <label for="nama">Nama <span class="text-danger">*</span></label>
                 <input type="text" name="nama[]" id="nama" class="form-control" placeholder="Masukkan Nama" required>
               </div>
             </td>
@@ -38,8 +38,8 @@
         <tr>
           <td>
             <div class="form-group">
-              <label for="nama">Nama *</label>
-              <input type="text" name="nama" id="nama" class="form-control" placeholder="Masukkan Nama" required>
+              <label for="nama">Nama <span class="text-danger">*</span></label>
+              <input type="text" name="nama[]" id="nama" class="form-control" placeholder="Masukkan Nama" required>
             </div>
           </td>
           <td>
