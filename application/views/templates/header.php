@@ -18,7 +18,7 @@
   <body>
   <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
   <div class="container">
-    <div class="logo">
+    <div>
       <img class="logo" src="<?php echo base_url('assets/img/Logo SIMILU transparan.png'); ?>">
     </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -36,13 +36,12 @@ body{
 }
 
 .logo2{
-    width: 250px;
+    width: 200px;
     height: auto;
-    
 }
 
 footer{
-    min-height: 50px;
+    min-height: 10px;
     color:#fefefe;
     padding: 5px;
     background-color: #1d1d1d;
