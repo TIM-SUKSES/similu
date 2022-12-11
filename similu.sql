@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2022 at 04:14 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Dec 11, 2022 at 07:47 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,19 +29,19 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `capres` (
   `id_calon` int(11) NOT NULL,
+  `nama_kandidat` varchar(128) NOT NULL,
   `nama_calon` varchar(128) NOT NULL,
-  `partai` varchar(128) NOT NULL DEFAULT 'logo_partai.jpg'
+  `partai` varchar(128) NOT NULL DEFAULT 'default.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `capres`
 --
 
-INSERT INTO `capres` (`id_calon`, `nama_calon`, `partai`) VALUES
-(1, 'Sandiaga Uni', 'logo_partai.jpg'),
-(2, 'Genji Pranowo', 'logo_partai.jpg'),
-(3, 'Prauwu Subianto', 'logo_partai.jpg'),
-(4, 'Anas Buswedan', 'logo_partai.jpg');
+INSERT INTO `capres` (`id_calon`, `nama_kandidat`, `nama_calon`, `partai`) VALUES
+(1, 'Calon ke-1', 'Genji Pranowo', 'logo-pdp.png'),
+(2, 'Calon ke-2', 'Prauwu Subianto', '1657710596_Logo_GERINDRA_10x10.png'),
+(3, 'Calon ke-3', 'Anas Buswedan', 'logo-nasdem2.jpg');
 
 -- --------------------------------------------------------
 
@@ -51,16 +51,17 @@ INSERT INTO `capres` (`id_calon`, `nama_calon`, `partai`) VALUES
 
 CREATE TABLE `roles` (
   `id_roles` int(11) NOT NULL,
-  `roles` varchar(128) NOT NULL
+  `nama_roles` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `roles`
 --
 
-INSERT INTO `roles` (`id_roles`, `roles`) VALUES
+INSERT INTO `roles` (`id_roles`, `nama_roles`) VALUES
 (1, 'admin'),
-(2, 'bawaslu');
+(2, 'masyarakat'),
+(3, 'bawaslu');
 
 -- --------------------------------------------------------
 
@@ -86,7 +87,7 @@ CREATE TABLE `user` (
   `nik` varchar(16) NOT NULL,
   `tanggal_input` date NOT NULL,
   `status` int(11) NOT NULL DEFAULT 0,
-  `level` enum('admin','masyarakat') NOT NULL
+  `level` enum('admin','masyarakat','bawaslu') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -94,7 +95,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_masyarakat`, `nama`, `nik`, `tanggal_input`, `status`, `level`) VALUES
-(1, 'Alvin Austin', '12210247', '2022-12-01', 0, 'masyarakat'),
+(1, 'Alvin Austin', '12210247', '2022-12-01', 0, 'bawaslu'),
 (2, 'Fadly Faturrohman', '12211208', '2022-12-01', 0, 'masyarakat'),
 (3, 'Raihan Ramadhan', '12211125', '2022-12-01', 0, 'masyarakat'),
 (4, 'Yusup Supriatna', '12210740', '2022-12-01', 0, 'masyarakat'),
@@ -144,7 +145,7 @@ ALTER TABLE `capres`
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id_roles` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_roles` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `suara`
@@ -156,7 +157,7 @@ ALTER TABLE `suara`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
