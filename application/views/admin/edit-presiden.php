@@ -13,7 +13,7 @@
 
         <div class="row">
           <div class="col-md-3">
-            <img src="<?php echo base_url('assets/img/' . $row->partai); ?>" alt="" class="img-fluid">
+            <img src="<?php echo base_url('assets/img/' . $row->partai); ?>" alt="" class="img-fluid" style="width: 200px;">
           </div>
           <div class="col-md-9">
             <div class="form-group">
