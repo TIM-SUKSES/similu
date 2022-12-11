@@ -25,9 +25,6 @@
     <div>
       <img class="logo" src="<?php echo base_url('assets/img/Logo SIMILU transparan.png'); ?>">
     </div>
-    <div>
-      <a href="" class="btn btn-light" data-toggle="modal" data-target="#modalLogin"> Login / Masuk </a>
-    </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
