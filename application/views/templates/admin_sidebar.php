@@ -25,7 +25,7 @@
             <i class="fa fa-group"></i> <span>Data Masyarakat</span>
           </a>
         </li>
-        <li class="<?php echo $this->uri->segment(2) == 'presiden' ? 'active' : '' ?> ">
+        <li class="<?php echo $this->uri->segment(2) == 'datapresiden' ? 'active' : '' ?> ">
           <a href="<?php echo site_url('admin/datapresiden'); ?>">
             <i class="fa fa-user"></i> <span>Data Presiden</span>
           </a>
