@@ -7,15 +7,15 @@
 
         <table class="table">
           <tr>
-            <th>Visi</th>
-            <td>
-              <?php echo $visimisi->visi;?>
-            </td>
-            <th>Misi</th>
-            <td>
-              <?php echo $visimisi->misi;?>
-            </td>
-          </tr>
+              <th>Visi</th>
+              <td>
+                <?php echo $visimisi->visi?>
+              </td>
+              <th>Misi</th>
+              <td>
+                <?php echo $visimisi->misi?>
+              </td>
+            </tr>
         </table>
 
         <a href="<?php echo site_url('home')?>" class="btb btn-primary">Kembali</a>
