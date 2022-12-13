@@ -1,28 +1,40 @@
-<div class="container">
-    <h2 class="display-4 text-white mt-5 h2-sec1 text-center">Perolehan Suara</h2>
-    <canvas id="HasilSuara"></canvas>
-</div>
+<section class="sec1" id="sec1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="display-4 text-white mt-5 h2-sec1 text-center">Perolehan Suara</h2>
+        <canvas id="HasilSuara" width="400" height="200"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="container">
-    <h2 class="text-white mt-5 h2-sec1 text-center">Voting</h2>
+<section class="sec2" id="sec2">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="display-4 text-white mt-5 h2-sec2 text-center">Calon</h2>
+      </div>
+    </div>
     <div class="row text-center">
       <?php foreach($capres as $cap): ?>
-          
+            
         <div class="col-md-4">
-          <div class="card" style="width: 18rem;">
-            <img src="<?php echo base_url('assets/img/'.$cap->partai); ?>" class="card-img-top" alt="...">
-            <div class="card-body mb-3">
-              <h5 class="card-title font-weight-bold"><?php echo $cap->id_calon; ?></h5>
-              <p class="card-text text-secondary"><?php echo $cap->nama_calon; ?></p>
-              <a href="<?php echo('home/visimisi'.$cap->id_calon);?>" class="btn btn-primary">Visi & Misi</a>
+            <div class="card">
+              <img src="<?php echo base_url('assets/img/'.$cap->partai); ?>" class="card-img-top" alt="...">
+              <div class="card-body mb-3">
+                <h5 class="card-title font-weight-bold"><?php echo $cap->id_calon; ?></h5>
+                <p class="card-text text-secondary"><?php echo $cap->nama_calon; ?></p>
+                <a href="<?php echo('home/visimisi/'.$cap->id_calon);?>" class="btn btn-primary">Visi & Misi</a>
+              </div>
             </div>
           </div>
-        </div>
 
       <?php endforeach; ?>
     </div>
-</div>
-
+  </div>
+</section>
+      
 <!-- Modal -->
 <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
