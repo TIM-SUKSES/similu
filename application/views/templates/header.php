@@ -48,7 +48,7 @@
               <a class="nav-link nav-active active" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-active" href="#">Pemilihan Suara</a>
+              <a class="nav-link nav-active" href="#sec2">Pemilihan Suara</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
