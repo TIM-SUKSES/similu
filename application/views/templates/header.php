@@ -12,6 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap.min.css" >
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/style.css" >
+
+    <script src="<?php echo base_url('assets/'); ?>js/Chart.min.js"></script>  
+    <style>
+      .img-circle {
+        display: block;
+        border-radius: 50%;
+        margin: 20px auto;
+        width: 300px;
+      }      
+    </style>
+
     <script src="<?php echo base_url('assets/'); ?>js/Chart.min.js"></script>
 
     
@@ -37,7 +48,7 @@
               <a class="nav-link nav-active active" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-active" href="#">Pemilihan Suara</a>
+              <a class="nav-link nav-active" href="#sec2">Pemilihan Suara</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
