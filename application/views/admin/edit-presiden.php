@@ -13,11 +13,11 @@
 
         <div class="row">
           <div class="col-md-3">
-            <img src="<?php echo base_url('assets/img/' . $row->partai); ?>" alt="" class="img-fluid" style="width: 200px;">
+            <img src="<?php echo base_url('assets/img/' . $row->partai); ?>" alt="" width="200px" class="img-fluid">
           </div>
           <div class="col-md-9">
             <div class="form-group">
-              <label for="nama_kandidat">Nama Kandidat</label>
+              <label for="nama_kandidat">Kandidat</label>
               <input type="text" name="nama_kandidat" id="nama_kandidat" class="form-control" value="<?php echo $row->nama_kandidat ?>" readonly>
             </div>
             <div class="form-group">
@@ -25,7 +25,11 @@
               <input type="text" name="nama_calon" id="nama_calon" class="form-control" value="<?php echo $row->nama_calon ?>">
             </div>
             <div class="form-group">
-              <label for="partai">Nama Presiden</label>
+              <label for="foto_presiden">Foto Presiden</label>
+              <input type="file" name="foto_presiden" id="foto_presiden" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="partai">Logo Partai</label>
               <input type="file" name="partai" id="partai" class="form-control">
             </div>
           </div>

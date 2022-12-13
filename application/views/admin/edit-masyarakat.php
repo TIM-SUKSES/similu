@@ -41,7 +41,7 @@
                 <label for="level">Roles <span class="text-danger">*</span></label>
                 <select name="level" class="form-control form-control-user">
                   <?php foreach ($roles as $r) { ?>
-                  <option value="<?= $r['id_roles'];?>"><?= $r['nama_roles'];?></option>
+                  <option value="<?= $r['id_roles'];?>" <?php echo $row->level == $r['nama_roles'] ? 'selected' : '' ?>><?= $r['nama_roles'];?></option>
                   <?php } ?>
                 </select>
               </div>
