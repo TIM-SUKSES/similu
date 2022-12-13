@@ -28,14 +28,14 @@ class Auth extends CI_Controller{
                     redirect("admin/dashboard");
                 } else {
                     $data_session = [
-                        'id_masyarakat' => $cek_nik->id_masyarakat,
-                        'nama' => $cek_nik->nama,
-                        'tanggal_input' => $cek_nik->tanggal_input,
-                        'level' => $cek_nik->level,
-                    ];
-                   
-                   $this->session->set_userdata($data_session);
-                   redirect("home");
+                         'id_masyarakat' => $cek_nik->id_masyarakat,
+                         'nama' => $cek_nik->nama,
+                         'tanggal_input' => $cek_nik->tanggal_input,
+                         'level' => $cek_nik->level,
+                     ];
+                
+                    $this->session->set_userdata($data_session);
+                    redirect("home");
                 }
 
             }else { 

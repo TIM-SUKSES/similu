@@ -13,7 +13,9 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>dist/css/skins/_all-skins.min.css">
   <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <script src="<?php echo base_url('assets/'); ?>bower_components/jquery/dist/jquery.min.js"></script>
   <script src="<?php echo base_url('assets/'); ?>js/Chart.min.js"></script>  
+  <script src="<?php echo base_url('assets/'); ?>ckeditor/ckeditor.js"></script>  
 </head>
 <body class="hold-transition skin-red sidebar-mini">

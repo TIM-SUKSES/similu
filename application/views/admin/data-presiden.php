@@ -13,6 +13,7 @@
                 <tr>
                   <th>No.</th>
                   <th>Kandidat</th>
+                  <th>Foto Presiden</th>
                   <th>Nama Presiden</th>
                   <th>Partai</th>
                   <th>Action</th>
@@ -23,6 +24,9 @@
                         <tr>
                             <td><?php echo $id_calon++ ?></td>
                             <td><?php echo $table->nama_kandidat ?></td>
+                            <td>
+                              <img src="<?php echo base_url('assets/img/'.$table->foto_presiden); ?>" width="100">
+                            </td>
                             <td><?php echo $table->nama_calon ?></td>
                             <td>
                               <img src="<?php echo base_url('assets/img/'.$table->partai); ?>" width="100">  
