@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <img src="<?php echo base_url('assets/img/'.$capres->partai);?>" class="img-circle">
+        <img src="<?php echo base_url('assets/img/'.$capres->foto_presiden);?>" class="img-circle">
         <h2 class="display-4 text-white mt-5 h2-sec2 text-center"><?php echo $capres->nama_calon;?></h2>
 
         <table class="table">
