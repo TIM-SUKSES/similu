@@ -33,7 +33,7 @@ class Auth extends CI_Controller{
                          'tanggal_input' => $cek_nik->tanggal_input,
                          'level' => $cek_nik->level,
                      ];
-                    
+                
                     $this->session->set_userdata($data_session);
                     redirect("home");
                 }
