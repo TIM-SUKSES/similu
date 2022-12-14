@@ -21,11 +21,11 @@
               <input type="text" name="nama_kandidat" id="nama_kandidat" class="form-control" value="<?php echo $row->nama_kandidat ?>" readonly>
             </div>
             <div class="form-group">
-              <label for="nama_calon">Nama Presiden</label>
+              <label for="nama_calon">Nama CAPRES</label>
               <input type="text" name="nama_calon" id="nama_calon" class="form-control" value="<?php echo $row->nama_calon ?>">
             </div>
             <div class="form-group">
-              <label for="foto_presiden">Foto Presiden</label>
+              <label for="foto_presiden">Foto CAPRES</label>
               <input type="file" name="foto_presiden" id="foto_presiden" class="form-control">
             </div>
             <div class="form-group">

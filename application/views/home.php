@@ -1,6 +1,6 @@
 <section class="sec1" id="sec1">
   <div class="container">
-    <h2 class="display-4 text-center text-white mb-5">Perolehan Suara</h2>
+    <h2 class="display-4 text-center text-white mb-5 padding-top">Perolehan Suara</h2>
     <div>
       <canvas id="HasilSuara"></canvas>
     </div>
@@ -9,11 +9,11 @@
 
 <section class="sec2" id="sec2">
   <div class="container">
-    <h2 class="display-4 text-center text-white mt-5 mb-5">Voting</h2>
+    <h2 class="display-4 text-center text-white mt-5 mb-5">Pemilihan Suara</h2>
     <div class="row">
       <?php foreach($capres as $cap) : ?>
-        <div class="col-md-4">
-          <div class="card mb-3" style="width: 18rem;">
+        <div class="col-md-4 mx-auto">
+          <div class="card mb-3">
             <img src="<?php echo base_url('assets/img/'.$cap->foto_presiden) ?>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-center text-primary font-weight-bold"><?php echo $cap->nama_kandidat; ?></h5>
@@ -63,17 +63,15 @@
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['CAPRES KE-1', 'CAPRES KE-2', 'CAPRES KE-3'],
+      labels: ['CAPRES NO. 1', 'CAPRES NO. 2'],
       datasets: [{
         label: '# Hasil Suara',
-        data: [25, 18, 30],
+        data: [18, 30],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
           'rgba(255, 206, 86, 0.2)'
         ],
         borderColor: [
-          'rgba(255, 99, 132, 1)',
           'rgba(54, 162, 235, 1)',
           'rgba(255, 206, 86, 1)'
         ],
