@@ -19,11 +19,11 @@ class Home extends CI_Controller
     $this->load->view('templates/footer', $data);
   }
   
-  public function visimisi($id_calon)
+  public function visimisi($id_kandidat)
   {
     $data['title'] = 'Visi & Misi';
-    $data['capres'] = $this->db->get_where('capres', ['id_calon' => $id_calon])->row();
-    $data['visimisi'] = $this->db->get_where('visimisi', ['id_visimisi' => $id_calon])->row();
+    $data['capres'] = $this->db->get_where('capres', ['id_calon' => $id_kandidat])->row();
+    $data['visimisi'] = $this->db->get_where('visimisi', ['id_kandidat' => $id_kandidat])->row();
     $this->load->view('templates/header', $data);
     $this->load->view('visimisi', $data);
     $this->load->view('templates/footer', $data);
