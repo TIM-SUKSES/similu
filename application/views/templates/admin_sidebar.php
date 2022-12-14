@@ -27,7 +27,7 @@
         </li>
         <li class="<?php echo $this->uri->segment(2) == 'datapresiden' ? 'active' : '' ?> ">
           <a href="<?php echo site_url('admin/datapresiden'); ?>">
-            <i class="fa fa-user"></i> <span>Data Presiden</span>
+            <i class="bi bi-people-fill"></i> <span style="margin-left: 6px;">Data CAPRES</span>
           </a>
         </li>
         <li class="<?php echo $this->uri->segment(2) == 'visimisi' ? 'active' : '' ?> ">

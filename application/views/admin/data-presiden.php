@@ -13,8 +13,8 @@
                 <tr>
                   <th>No.</th>
                   <th>Kandidat</th>
-                  <th>Foto Presiden</th>
-                  <th>Nama Presiden</th>
+                  <th>Foto</th>
+                  <th>Nama</th>
                   <th>Partai</th>
                   <th>Action</th>
                 </tr>

@@ -21,7 +21,7 @@
       <!-- small box -->
       <div class="small-box bg-green">
         <div class="inner">
-          <h3>73</h3>
+          <h3>48</h3>
 
           <p>Total Pemilih</p>
         </div>
@@ -55,17 +55,15 @@
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['CAPRES KE-1', 'CAPRES KE-2', 'CAPRES KE-3'],
+      labels: ['CAPRES NO. 1', 'CAPRES NO. 2'],
       datasets: [{
         label: '# Hasil Suara',
-        data: [25, 18, 30],
+        data: [18, 30],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
           'rgba(255, 206, 86, 0.2)'
         ],
         borderColor: [
-          'rgba(255, 99, 132, 1)',
           'rgba(54, 162, 235, 1)',
           'rgba(255, 206, 86, 1)'
         ],

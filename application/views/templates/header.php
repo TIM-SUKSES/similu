@@ -12,27 +12,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap.min.css" >
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/style.css" >
-
-    <script src="<?php echo base_url('assets/'); ?>js/Chart.min.js"></script>  
+    <script src="<?php echo base_url('assets/'); ?>js/Chart.min.js"></script>
     <style>
       .img-circle {
         display: block;
         border-radius: 50%;
         margin: 20px auto;
         width: 300px;
-      }      
+      }
+      .z-index {
+        z-index: 1;
+      }
+      
+      .padding-top {
+        padding-top: 100px;
+      }
+
+      .navbar {
+        width: 100%;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(5px);
+      }
     </style>
-
-    <script src="<?php echo base_url('assets/'); ?>js/Chart.min.js"></script>
-
-    
-      <script src="<?php echo base_url('assets/'); ?>js/Chart.min.js"></script>  
-    
-
     <title><?php echo $title ?></title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong z-index" style="position: fixed;">
     <div class="container">
       <div>
         <img class="logo" src="<?php echo base_url('assets/img/Logo SIMILU transparan.png'); ?>">

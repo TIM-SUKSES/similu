@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2022 at 03:50 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Dec 14, 2022 at 01:24 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,9 +40,8 @@ CREATE TABLE `capres` (
 --
 
 INSERT INTO `capres` (`id_calon`, `nama_kandidat`, `nama_calon`, `partai`, `foto_presiden`) VALUES
-(1, 'Calon ke-1', 'Genji Pranowo', 'logo-pdp.png', 'Ganjar_Pranowo,_Gubernur_Jateng_Periode_II.jpg'),
-(2, 'Calon ke-2', 'Prauwu Subianto', '1657710596_Logo_GERINDRA_10x10.png', 'Menteri_Pertahanan_Prabowo_Subianto.jpg'),
-(3, 'Calon ke-3', 'Anas Buswedan', 'logo-nasdem2.jpg', 'Gubernur_Anies.jpg');
+(1, 'CAPRES NO. 1', 'Genji Pranowo & Prauwu Subianto', 'logogram-color.png', 'capres_1_(1).png'),
+(2, 'CAPRES NO. 2', 'Anas Buswedan & Ridwan Kemal', 'logo-nasdem2.jpg', 'capres_2_(1).png');
 
 -- --------------------------------------------------------
 
@@ -123,9 +122,8 @@ CREATE TABLE `visimisi` (
 --
 
 INSERT INTO `visimisi` (`id_visimisi`, `id_kandidat`, `visi`, `misi`) VALUES
-(2, 1, '<p>1. Visi ke-1</p>\r\n\r\n<p>2. Visi ke-2</p>\r\n\r\n<p>3. Visi ke-3</p>\r\n', '<p>1. Misi ke-1</p>\r\n\r\n<p>2. Misi ke-2</p>\r\n\r\n<p>3. Misi ke-3</p>\r\n'),
-(3, 2, '<p>1. Visi ke-1</p>\r\n\r\n<p>2. Visi ke-2</p>\r\n\r\n<p>3. Visi ke-3</p>\r\n', '<p>1. Misi ke-1</p>\r\n\r\n<p>2. Misi ke-2</p>\r\n\r\n<p>3. Misi ke-3</p>\r\n'),
-(4, 2, '<p>1. Visi ke-1</p>\r\n\r\n<p>2. Visi ke-2</p>\r\n\r\n<p>3. Visi ke-4</p>\r\n', '<p>1. Misi ke-1</p>\r\n\r\n<p>2. Misi ke-2</p>\r\n\r\n<p>3. Misi ke-3</p>\r\n');
+(1, 1, '<p>Visi PSI adalah Indonesia yang berkarakter kerakyatan, berkemanusiaan, berkeragaman, berkeadilan, berkemajuan dan bermartabat.</p>\r\n', '<p>1. Menggalang kekuatan nasional melalui sebuah kepemimpinan politik yang ideologis, terorganisir, dan terstruktur.</p>\r\n\r\n<p>2. Menggalang perjuangan politik dengan nilai solidaritas nasional melanjutkan agenda reformasi dan demokratisasi.</p>\r\n\r\n<p>3. Membangun kembali semangat republikanisme, merajut kembali rasa kebangsaan yang terserak, menanam kembali benih-benih idealisme, mendirikan kembali benteng-benteng kebhinnekaan dan membangun kembali pondasi gotong royong.</p>\r\n\r\n<p>4. Mendorong martabat Indonesia dalam pergaulan internasional, sesuai prinsip politik bebas aktif dengan melibatkan kondisi geopolitik internasional yang sedang berkembang.</p>\r\n'),
+(2, 2, '<p>Visi Partai Nasdem adalah Indonesia yang merdeka sebagai negara bangsa, berdaulat secara ekonomi, dan bermartabat dalam budaya.</p>\r\n', '<p>1. Membangun Politik Demokratis Berkeadilan berarti menciptakan tata ulang demokrasi yang membuka partisipasi politik rakyat dengan cara membuka akses masyarakat secara keseluruhan. Mengembangkan model pendidikan kewarganegaraan untuk memperkuat karakter bangsa, serta melakukan perubahan menuju efisiensi sistem pemilihan umum. Memantapkan reformasi birokrasi untuk menciptakan sistem pelayanan masyarakat. Melakukan reformasi hukum dengan menjadikan konstitusi UUD 1945 (Undang-Undang Dasar tahun seribu sembilan ratus empat puluh lima) sebagai kontrak politik kebangsaan.</p>\r\n\r\n<p>2. Menciptakan Demokrasi Ekonomi melalui tatanan demokrasi ekonomi maka tercipta partisipasi dan akses masyarakat dalam kehidupan ekonomi negara, termasuk di dalamnya distribusi ekonomi yang adil dan merata yang akan berujung pada kesejahteraan seluruh rakyat Indonesia. Dalam mewujudkan cita-cita ini maka perlu untuk mendorong penciptaan lapangan kerja, sistem jaminan sosial nasional, penguatan industri nasional, serta mendorong kemandirian ekonomi di tingkat lokal.</p>\r\n\r\n<p>3. Menjadikan Budaya Gotong Royong sebagai karakter bangsa. Dalam mewujudkan ini maka sistem yang menjamin terlaksananya sistem pendidikan nasional yang terstruktur dan menjamin hak memperoleh pendidikan bagi seluruh rakyat Indonesia. Menyelenggarakan pendidikan kewarganegaraan yang menciptakan solidaritas dan soliditas nasional, sehingga seluruh rakyat Indonesia merasakan cita rasa sebagai sebuah bangsa dan menjadikan gotong royong sebagai amalan hidup keseharian. Kebudayaan ini akan menciptakan karakter bangsa yang bermartabat dan menopang kesiapan Negara dalam kehidupan global.</p>\r\n');
 
 --
 -- Indexes for dumped tables
@@ -187,7 +185,7 @@ ALTER TABLE `suara`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `visimisi`
