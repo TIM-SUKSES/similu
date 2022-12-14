@@ -8,6 +8,9 @@ class Home extends CI_Controller
   {
     parent::__construct();
     $this->load->model('HomeModel');
+    if ($this->session->userdata('level') != 'masyarakat'){
+      redirect('auth');
+    }
   }
 
   public function index()
