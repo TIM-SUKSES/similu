@@ -31,7 +31,19 @@ class Home extends CI_Controller
     $this->load->view('visimisi', $data);
     $this->load->view('templates/footer', $data);
   }
+
+  public function pilih_kandidat()
+  {
+    $this->HomeModel->pilih_kandidat();
+    $this->HomeModel->update_status_user();
+    if ($this->db->affected_rows() > 0) {
+      $result = ['success' => true];
+    } else {
+      $result = ['success' => false];
+    }
+
+    echo json_encode($result);
+  }
+  
+
 }
-
-
-?>
