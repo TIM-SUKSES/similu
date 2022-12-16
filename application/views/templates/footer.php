@@ -13,18 +13,6 @@
 <script src="<?php echo base_url('assets/'); ?>js/popper.min.js"></script>
 <script src="<?php echo base_url('assets/'); ?>js/bootstrap.min.js"></script>
 <script src="<?php echo base_url('assets/'); ?>sweetalert/sweetalert2.all.min.js"></script>
-<<<<<<< HEAD
-<script>
-  $(document).ready(function() {
-    $('.nav-active').on('click', function() {
-      $('.nav-active').removeClass('active');
-      $(this).addClass('active');
-    });
-    $('.btn-success').on('click', function() {
-      let nama_kandidat = $(this).data('nama_kandidat');
-      let id_user = $(this).data('id_user');
-
-=======
 
 <script>
   $(document).ready(function(){
@@ -37,7 +25,6 @@
       let nama_kandidat = $(this).data('nama_kandidat');
       let id_user = $(this).data('id_user');
 
->>>>>>> 79c003ce44f39c152dbb94209723c263038e0b9b
       Swal.fire({
         title: 'Apakah Anda Yakin?',
         icon: 'question',
@@ -49,11 +36,7 @@
         if (result.isConfirmed) {
           $.ajax({
             type: 'post',
-<<<<<<< HEAD
-            url: '<?= base_url('home/pilih_kandidat') ?>',
-=======
             url: '<?php echo site_url('home/pilih_kandidat'); ?>',
->>>>>>> 79c003ce44f39c152dbb94209723c263038e0b9b
             dataType: 'json',
             data: {
               'nama_kandidat': nama_kandidat,
@@ -61,21 +44,23 @@
             },
             success: function(result) {
               if (result.success == true) {
-<<<<<<< HEAD
-                alert('okey');
-=======
-                alert('ok');
->>>>>>> 79c003ce44f39c152dbb94209723c263038e0b9b
+                  Swal.fire({
+                  title: 'Terima kasih telah ber-partisipasi',
+                  icon: 'success',
+                  showCancelButton: false,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'Ok'
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    location.reload();
+                  }
+                })
               }
             }
           })
         }
       })
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 79c003ce44f39c152dbb94209723c263038e0b9b
     })
   });
 </script>

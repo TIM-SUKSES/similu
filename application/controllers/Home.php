@@ -17,6 +17,9 @@ class Home extends CI_Controller
   {
     $data['title'] = 'Home';
     $data['capres'] = $this->db->get('capres')->result();
+    $data['capres1'] = $this->db->get_where('suara', ['nama_kandidat' => 'CAPRES NO. 1'])->num_rows();
+    $data['capres2'] = $this->db->get_where('suara', ['nama_kandidat' => 'CAPRES NO. 2'])->num_rows();
+    $data['user'] = $this->db->get_where('user',['id_masyarakat' => $this->session->userdata('id_masyarakat')])->row();
     $this->load->view('templates/header', $data);
     $this->load->view('home', $data);
     $this->load->view('templates/footer', $data);
@@ -31,25 +34,6 @@ class Home extends CI_Controller
     $this->load->view('visimisi', $data);
     $this->load->view('templates/footer', $data);
   }
-<<<<<<< HEAD
-
-  public function pilih_kandidat()
-  {
-    $this->HomeModel->pilih_kandidat();
-    $this->HomeModel->update_status_user();
-    if ($this->db->affected_rows() > 0) {
-      $result = ['success' => true];
-    }else {
-      $result = ['success' => false];
-    }
-
-    echo json_encode($result);
-  }
-
-  
-}
-=======
->>>>>>> 79c003ce44f39c152dbb94209723c263038e0b9b
 
   public function pilih_kandidat()
   {
