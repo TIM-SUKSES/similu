@@ -20,18 +20,18 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
-        <li class="<?php echo $this->uri->segment(2) == 'datamasyarakat' ? 'active' : '' ?> ">
-          <a href="<?php echo site_url('admin/datamasyarakat'); ?>">
+        <li class="<?php echo $this->uri->segment(2) == 'DataMasyarakat' ? 'active' : '' ?> ">
+          <a href="<?php echo site_url('admin/DataMasyarakat'); ?>">
             <i class="fa fa-group"></i> <span>Data Masyarakat</span>
           </a>
         </li>
-        <li class="<?php echo $this->uri->segment(2) == 'datapresiden' ? 'active' : '' ?> ">
-          <a href="<?php echo site_url('admin/datapresiden'); ?>">
+        <li class="<?php echo $this->uri->segment(2) == 'DataPresiden' ? 'active' : '' ?> ">
+          <a href="<?php echo site_url('admin/DataPresiden'); ?>">
             <i class="bi bi-people-fill"></i> <span style="margin-left: 6px;">Data CAPRES</span>
           </a>
         </li>
-        <li class="<?php echo $this->uri->segment(2) == 'visimisi' ? 'active' : '' ?> ">
-          <a href="<?php echo site_url('admin/visimisi'); ?>">
+        <li class="<?php echo $this->uri->segment(2) == 'VisiMisi' ? 'active' : '' ?> ">
+          <a href="<?php echo site_url('admin/VisiMisi'); ?>">
             <i class="fa fa-id-card"></i> <span>Visi & Misi</span>
           </a>
         </li>

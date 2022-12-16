@@ -9,7 +9,7 @@
     </div>
     <!-- header -->
     <div class="box-body">
-      <form action="<?php echo site_url('admin/visimisi/simpan'); ?>" method="post" enctype="multipart/form-data">
+      <form action="<?php echo site_url('admin/VisiMisi/simpan'); ?>" method="post" enctype="multipart/form-data">
 
         <div class="form-group">
           <label for="id_kandidat">Nama Kandidat</label>
@@ -30,7 +30,7 @@
           <textarea name="misi" id="misi" class="form-control ckeditor" required></textarea>
         </div>
 
-        <a href="<?php echo site_url('admin/visimisi') ?>" class="btn bg-green"><i class="fa fa-arrow-circle-left"> Kembali </i></a>
+        <a href="<?php echo site_url('admin/VisiMisi') ?>" class="btn bg-green"><i class="fa fa-arrow-circle-left"> Kembali </i></a>
         <button type="submit" class="btn bg-navy" style="margin-left: 4px;"><i class="fa fa-save"></i> Simpan</button>
       </form>
     </div>

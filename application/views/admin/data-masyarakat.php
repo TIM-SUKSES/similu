@@ -5,7 +5,7 @@
 <div class="box">
             <div class="box-header">
                 <?= $this->session->flashdata('message'); ?>
-                <a href="<?php echo site_url('admin/datamasyarakat/tambah') ?>" class="btn bg-red"><i class="fa fa-plus-circle"> Tambah Data Masyarakat </i></a>
+                <a href="<?php echo site_url('admin/DataMasyarakat/tambah') ?>" class="btn bg-red"><i class="fa fa-plus-circle"> Tambah Data Masyarakat </i></a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -29,9 +29,9 @@
                             <td><?php echo $table->tanggal_input ?></td>
                             <td><?php echo $table->level ?></td>
                             <td>
-                                <a href="<?php echo site_url('admin/datamasyarakat/edit/'. $table->id_masyarakat); ?>" 
+                                <a href="<?php echo site_url('admin/DataMasyarakat/edit/'. $table->id_masyarakat); ?>" 
                                 class="btn btn-sm btn-info"><i class="fa fa-pencil-square-o"></i>Ubah</a>
-                                <a href="<?php echo site_url('admin/datamasyarakat/hapus/'. $table->id_masyarakat); ?>" 
+                                <a href="<?php echo site_url('admin/DataMasyarakat/hapus/'. $table->id_masyarakat); ?>" 
                                 class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapusnya ?')"><i class="fa fa-trash-o"></i>Hapus</a>
                             </td>
                         </tr>

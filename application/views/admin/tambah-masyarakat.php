@@ -5,11 +5,11 @@
   <div class="box">
     <div class="box-header">
       <?= $this->session->flashdata('message'); ?>
-      <a href="<?php echo site_url('admin/datamasyarakat') ?>" class="btn bg-green"><i class="fa fa-arrow-circle-left"> Kembali </i></a>
+      <a href="<?php echo site_url('admin/DataMasyarakat') ?>" class="btn bg-green"><i class="fa fa-arrow-circle-left"> Kembali </i></a>
     </div>
     <!-- header -->
     <div class="box-body">
-      <form action="<?php echo site_url('admin/datamasyarakat/simpanmasyarakat'); ?>" method="post" enctype="multipart/form-data">
+      <form action="<?php echo site_url('admin/DataMasyarakat/simpanMasyarakat'); ?>" method="post" enctype="multipart/form-data">
         <table id="table" width="30%">
           <tr>
             <td>

@@ -8,7 +8,7 @@
     </div>
     <!-- header -->
     <div class="box-body">
-      <?php echo form_open_multipart('admin/datapresiden/update');?>
+      <?php echo form_open_multipart('admin/DataPresiden/update');?>
         <input type="hidden" name="id_calon" value="<?php echo $row->id_calon ?>">
 
         <div class="row">
@@ -35,7 +35,7 @@
           </div>
         </div>
 
-        <a href="<?php echo site_url('admin/datapresiden') ?>" class="btn bg-green"><i class="fa fa-arrow-circle-left"> Kembali </i></a>
+        <a href="<?php echo site_url('admin/DataPresiden') ?>" class="btn bg-green"><i class="fa fa-arrow-circle-left"> Kembali </i></a>
         <button type="submit" class="btn bg-navy" style="margin-left: 4px;"><i class="fa fa-pencil-square-o"></i> Ubah</button>
       </form>
     </div>

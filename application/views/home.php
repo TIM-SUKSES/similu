@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="display-4 text-center text-white mb-5 padding-top">Perolehan Suara</h2>
     <div>
-      <canvas id="HasilSuara"></canvas>
+      <canvas id="HasilSuara" height="150"></canvas>
     </div>
   </div>
 </section>
