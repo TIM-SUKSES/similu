@@ -20,8 +20,12 @@
               <p class="card-text text-center text-secondary"><?php echo $cap->nama_calon; ?></p>
               <div class="d-flex justify-content-between">
                 <a href="<?php echo site_url('home/visimisi/' . $cap->id_calon); ?>" class="btn btn-primary">Lihat Visi & Misi</a>
+<<<<<<< HEAD
                 <a href="#" class="btn btn-success" data-nama_kandidat="<?= $cap->nama_kandidat; ?>"
                  data-id_user="<?= $this->session->userdata('id_user'); ?>">Pilih <?php echo $cap->nama_kandidat; ?></a>
+=======
+                <a href="#" class="btn btn-success" data-nama_kandidat="<?php echo $cap->nama_kandidat ?>" data-id_user="<?php echo $this->session->userdata('id_masyarakat'); ?>">Pilih <?php echo $cap->nama_kandidat; ?></a>
+>>>>>>> 79c003ce44f39c152dbb94209723c263038e0b9b
               </div>
             </div>
           </div>
