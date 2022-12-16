@@ -9,7 +9,7 @@
     </div>
     <!-- header -->
     <div class="box-body">
-      <form action="<?php echo site_url('admin/visimisi/update'); ?>" method="post" enctype="multipart/form-data">
+      <form action="<?php echo site_url('admin/VisiMisi/update'); ?>" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id_visimisi" value="<?php echo $row->id_visimisi ?>">
 
         <div class="form-group">
@@ -31,7 +31,7 @@
           <textarea name="misi" id="misi" class="form-control ckeditor" required><?php echo $row->misi ?></textarea>
         </div>
 
-        <a href="<?php echo site_url('admin/visimisi') ?>" class="btn bg-green"><i class="fa fa-arrow-circle-left"> Kembali </i></a>
+        <a href="<?php echo site_url('admin/VisiMisi') ?>" class="btn bg-green"><i class="fa fa-arrow-circle-left"> Kembali </i></a>
         <button type="submit" class="btn bg-navy" style="margin-left: 4px;"><i class="fa fa-pencil-square-o"></i> Ubah</button>
       </form>
     </div>

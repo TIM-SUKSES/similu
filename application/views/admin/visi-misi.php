@@ -5,7 +5,7 @@
 <div class="box">
             <div class="box-header">
                 <?= $this->session->flashdata('message'); ?>
-                <a href="<?php echo site_url('admin/visimisi/tambah') ?>" class="btn bg-red"><i class="fa fa-plus-circle"> Tambah Visi & Misi </i></a>
+                <a href="<?php echo site_url('admin/VisiMisi/tambah') ?>" class="btn bg-red"><i class="fa fa-plus-circle"> Tambah Visi & Misi </i></a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -27,9 +27,9 @@
                             <td><?php echo $table->visi ?></td>
                             <td><?php echo $table->misi ?></td>
                             <td>
-                                <a href="<?php echo site_url('admin/visimisi/edit/'. $table->id_visimisi); ?>" 
+                                <a href="<?php echo site_url('admin/VisiMisi/edit/'. $table->id_visimisi); ?>" 
                                 class="btn btn-sm btn-info"><i class="fa fa-pencil-square-o"></i>Ubah</a>
-                                <a href="<?php echo site_url('admin/visimisi/hapus/'. $table->id_visimisi); ?>" 
+                                <a href="<?php echo site_url('admin/VisiMisi/hapus/'. $table->id_visimisi); ?>" 
                                 class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapusnya ?')"><i class="fa fa-trash-o"></i>Hapus</a>
                             </td>
                         </tr>

@@ -6,14 +6,14 @@
       <!-- small box -->
       <div class="small-box bg-aqua">
         <div class="inner">
-          <h3>150</h3>
+          <h3><?= $total_user; ?></h3>
 
           <p>Total Masyarakat</p>
         </div>
         <div class="icon">
           <i class="ion ion-person"></i>
         </div>
-        <a href="#" class="small-box-footer">Selanjutnya <i class="fa fa-arrow-circle-right"></i></a>
+        <a href="<?= site_url('admin/DataMasyarakat'); ?>" class="small-box-footer">Selanjutnya <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->
@@ -21,14 +21,14 @@
       <!-- small box -->
       <div class="small-box bg-green">
         <div class="inner">
-          <h3>48</h3>
+          <h3><?= $total_suara; ?></h3>
 
           <p>Total Pemilih</p>
         </div>
         <div class="icon">
           <i class="ion ion-stats-bars"></i>
         </div>
-        <a href="#" class="small-box-footer">Selanjutnya <i class="fa fa-arrow-circle-right"></i></a>
+        <a href="<?= site_url('admin/suara'); ?>" class="small-box-footer">Selanjutnya <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@
   </div>
 
   <div>
-    <canvas id="HasilSuara"></canvas>
+    <canvas id="HasilSuara" height="100"></canvas>
   </div>
 </section>
 
@@ -58,7 +58,10 @@
       labels: ['CAPRES NO. 1', 'CAPRES NO. 2'],
       datasets: [{
         label: '# Hasil Suara',
-        data: [18, 30],
+        data: [
+          <?= $capres1; ?>,
+          <?= $capres2; ?>,
+        ],
         backgroundColor: [
           'rgba(54, 162, 235, 0.2)',
           'rgba(255, 206, 86, 0.2)'

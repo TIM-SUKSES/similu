@@ -25,7 +25,7 @@
                   <td><?php echo $table->nama_kandidat ?></td>
                   <td><?php echo $table->tanggal_input ?></td>
                   <td>
-                      <a href="<?php echo site_url('admin/visimisi/hapus/'. $table->id_suara); ?>" 
+                      <a href="<?php echo site_url('admin/Suara/hapus/'. $table->id_suara); ?>" 
                       class="btn btn-sm btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapusnya ?')"><i class="fa fa-trash-o"></i>Hapus</a>
                   </td>
               </tr>

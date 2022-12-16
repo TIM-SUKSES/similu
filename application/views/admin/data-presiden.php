@@ -32,7 +32,7 @@
                               <img src="<?php echo base_url('assets/img/'.$table->partai); ?>" width="100">  
                             </td>
                             <td>
-                                <a href="<?php echo site_url('admin/datapresiden/edit/'. $table->id_calon); ?>" 
+                                <a href="<?php echo site_url('admin/DataPresiden/edit/'. $table->id_calon); ?>" 
                                 class="btn btn-sm btn-info"><i class="fa fa-pencil-square-o"></i>Ubah</a>
                             </td>
                         </tr>

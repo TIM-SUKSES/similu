@@ -29,7 +29,7 @@ class Suara extends CI_Controller{
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <h4><i class="icon fa fa-warning"></i> Data Telah Terhapus! </h4>
             </div>');
-            redirect('admin/visimisi');
+            redirect('admin/Suara');
         }
     }
 }

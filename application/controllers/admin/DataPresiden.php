@@ -41,7 +41,7 @@ class DataPresiden extends CI_Controller{
                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                 <h4><i class="icon fa fa-warning"></i> Data Telah diupdate! </h4>
             </div>');
-            redirect('admin/datapresiden');
+            redirect('admin/DataPresiden');
         }
     }
 

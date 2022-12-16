@@ -8,7 +8,7 @@
     </div>
     <!-- header -->
     <div class="box-body">
-      <form action="<?php echo site_url('admin/datamasyarakat/update'); ?>" method="post" enctype="multipart/form-data">
+      <form action="<?php echo site_url('admin/DataMasyarakat/update'); ?>" method="post" enctype="multipart/form-data">
       <input type="hidden" name="id_masyarakat" value="<?php echo $row->id_masyarakat ?>">
         <table id="table" width="30%">
           <tr>
@@ -49,7 +49,7 @@
           </tr>
         </table>
 
-        <a href="<?php echo site_url('admin/datamasyarakat') ?>" class="btn bg-green"><i class="fa fa-arrow-circle-left"> Kembali </i></a>
+        <a href="<?php echo site_url('admin/DataMasyarakat') ?>" class="btn bg-green"><i class="fa fa-arrow-circle-left"> Kembali </i></a>
         <button type="submit" class="btn bg-navy" style="margin-left: 4px;"><i class="fa fa-pencil-square-o"></i> Ubah</button>
       </form>
     </div>
