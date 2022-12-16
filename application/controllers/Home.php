@@ -17,6 +17,9 @@ class Home extends CI_Controller
   {
     $data['title'] = 'Home';
     $data['capres'] = $this->db->get('capres')->result();
+    $data['capres1'] = $this->db->get_where('suara', ['nama_kandidat' => 'CAPRES NO. 1'])->num_rows();
+    $data['capres2'] = $this->db->get_where('suara', ['nama_kandidat' => 'CAPRES NO. 2'])->num_rows();
+    $data['user'] = $this->db->get_where('user',['id_masyarakat' => $this->session->userdata('id_masyarakat')])->row();
     $this->load->view('templates/header', $data);
     $this->load->view('home', $data);
     $this->load->view('templates/footer', $data);

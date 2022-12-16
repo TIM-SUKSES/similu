@@ -44,7 +44,18 @@
             },
             success: function(result) {
               if (result.success == true) {
-                alert('okey');
+                Swal.fire({
+                  title: 'Terimakasih telah berpartisipasi',
+                  icon: 'success',
+                  showCancelButton: false,
+                  confirmButtonColor: '#3085d6',
+                  cancelButtonColor: '#d33',
+                  confirmButtonText: 'Ok'
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    location.reload();
+                  }
+                })
               }
             }
           })
