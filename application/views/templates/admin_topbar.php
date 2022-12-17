@@ -43,11 +43,8 @@
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="<?php echo site_url('auth/logout'); ?>" class="btn btn-default btn-flat">Logout</a>
+                <div class="text-center">
+                  <a href="<?php echo site_url('auth/logout'); ?>" class="btn btn-default btn-flat"> <i class="fa fa-sign-out"></i> Logout</a>
                 </div>
               </li>
             </ul>
