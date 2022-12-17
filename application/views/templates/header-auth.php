@@ -18,6 +18,7 @@
   <style>
     .logo {
       margin-left: -20px;
+      width: 100px;
     }
 
     .btn-top {
