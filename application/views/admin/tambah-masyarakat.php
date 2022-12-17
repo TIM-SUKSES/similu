@@ -30,14 +30,6 @@
           <tr>
             <td>
               <div class="form-group">
-                <label for="tanggal_input">Tanggal Input <span class="text-danger">*</span></label>
-                <input type="date" name="tanggal_input" id="tanggal_input" class="form-control" placeholder="Masukkan Tanggal Input" required>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="form-group">
                 <label for="level">Roles <span class="text-danger">*</span></label>
                 <select name="level" class="form-control form-control-user" required>
                   <?php foreach ($roles as $r) { ?>

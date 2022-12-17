@@ -20,9 +20,6 @@
         margin: 20px auto;
         width: 300px;
       }
-      .z-index {
-        z-index: 1;
-      }
       
       .padding-top {
         padding-top: 100px;
@@ -30,44 +27,68 @@
 
       .navbar {
         width: 100%;
-        height: 50px;
+        position: fixed;
+        z-index: 1;
         background-color: rgba(255, 255, 255, 0.3);
         backdrop-filter: blur(5px);
+      }
+
+      .logo {
+        width: 60px;
+      }
+
+      .title-home {
+        font-size: 35px;
+      }
+
+      @media screen and (min-width:1024px) {
+        .logo {
+          width: 100px;
+        }
+
+        .navbar {
+          height: 50px;
+        }
+
+        .title-home {
+          font-size: 56px;
+        }
       }
     </style>
     <title><?php echo $title ?></title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong z-index" style="position: fixed;">
-    <div class="container">
-      <div>
-        <img class="logo" src="<?php echo base_url('assets/img/Logo SIMILU transparan.png'); ?>">
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <?php if($this->session->userdata('id_masyarakat') != NULL ) : ?>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link nav-active active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-active" href="#sec2">Pemilihan Suara</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <?php echo $this->session->userdata('nama');  ?>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Profile</a>
-                <a class="dropdown-item" href="<?php echo site_url('auth/logout') ?>">Logout</a>
-              </div>
-            </li>
-          </ul>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+      <div class="container">
+        <div>
+          <img class="logo" src="<?php echo base_url('assets/img/Logo SIMILU transparan.png'); ?>">
         </div>
-      <?php endif; ?>
-    </div>
-  
-  </nav>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <?php if($this->session->userdata('id_masyarakat') != NULL ) : ?>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link nav-active active" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-active" href="#sec2">Pemilihan Suara</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <?php echo $this->session->userdata('nama');  ?>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="<?php echo site_url('auth/logout') ?>">Logout</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        <?php endif; ?>
+      </div>
+    </nav>
+  </header>

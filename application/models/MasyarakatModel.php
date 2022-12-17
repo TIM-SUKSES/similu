@@ -13,7 +13,6 @@ class MasyarakatModel extends CI_Model{
     $data = [
       'nama' => $this->input->post('nama', true),
       'nik' => $this->input->post('nik', true),
-      'tanggal_input' => $this->input->post('tanggal_input', true),
       'level' => $this->input->post('level', true)
     ];
 
@@ -25,7 +24,6 @@ class MasyarakatModel extends CI_Model{
     $data = [
       'nama' => $this->input->post('nama', true),
       'nik' => $this->input->post('nik', true),
-      'tanggal_input' => $this->input->post('tanggal_input', true),
       'level' => $this->input->post('level', true)
     ];
     $this->db->where('id_masyarakat', $this->input->post('id_masyarakat'));
