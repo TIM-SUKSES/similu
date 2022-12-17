@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>font-awesome-4.7.0/css/font-awesome.min.css" >
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap.min.css" >
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/style.css" >
     <script src="<?php echo base_url('assets/'); ?>js/Chart.min.js"></script>
@@ -79,11 +80,10 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <?php echo $this->session->userdata('nama');  ?>
+                  <i class="fa fa-user"></i> <?php echo $this->session->userdata('nama');  ?>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="<?php echo site_url('auth/logout') ?>">Logout</a>
+                  <a class="dropdown-item" href="<?php echo site_url('auth/logout') ?>"> <i class="fa fa-sign-out"></i> Logout</a>
                 </div>
               </li>
             </ul>

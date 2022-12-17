@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/bootstrap.min.css" >
+    <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>font-awesome-4.7.0/css/font-awesome.min.css" >
     <link rel="stylesheet" href="<?php echo base_url('assets/'); ?>css/style.css" >
     <script src="<?php echo base_url('assets/'); ?>js/Chart.min.js"></script>
     <title><?php echo $title ?></title>
