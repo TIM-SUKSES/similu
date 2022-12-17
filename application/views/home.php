@@ -13,7 +13,7 @@
     <div class="row">
       <?php foreach($capres as $cap) : ?>
         <div class="col-md-4 mx-auto">
-          <div class="card mb-3">
+          <div class="card mb-3 shadow-lg">
             <img src="<?php echo base_url('assets/img/'.$cap->foto_presiden) ?>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title text-center text-primary font-weight-bold"><?php echo $cap->nama_kandidat; ?></h5>
