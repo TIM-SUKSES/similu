@@ -10,18 +10,18 @@ kekurangannya, yaitu kurang nya fitur fingerprint untuk mencegah pemalsuan ident
 *******************
 Anggota Kelompok SIMILU
 *******************
-Alvin Austin (12210247)
+Alvin Austin (12210247 A)
 Github : https://github.com/wandesay75
 
-Fadly Faturrohman  : 12211208
+Fadly Faturrohman  : (12211208 B)
 Github : https://github.com/FadlyFat
 
-Raihan Ramadhan : 12211125
+Raihan Ramadhan : (12211125 B)
 Github : https://github.com/raihanprojecthub
 
-Nabil Muthi Maulani : 12210365
+Nabil Muthi Maulani : (12210365 A)
 Github : https://github.com/Nabilmuthi77
 
-Yusup supriatna : 12210740
+Yusup supriatna : (12210740 A)
 Github : https://github.com/Yuruna01
 
