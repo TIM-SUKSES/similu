@@ -1,15 +1,15 @@
 <section class="sec1" id="sec1">
   <div class="container">
-    <h2 class="display-4 text-center text-white mb-5 padding-top">Perolehan Suara</h2>
+    <h2 class="display-4 text-center text-white mb-5 padding-top title-home">Perolehan Suara</h2>
     <div>
-      <canvas id="HasilSuara" height="150"></canvas>
+      <canvas id="HasilSuara" class="chart" height="150"></canvas>
     </div>
   </div>
 </section>
 
 <section class="sec2" id="sec2">
   <div class="container">
-    <h2 class="display-4 text-center text-white mt-5 mb-5">Pemilihan Suara</h2>
+    <h2 class="display-4 text-center text-white mt-5 mb-5 title-home">Pemilihan Suara</h2>
     <div class="row">
       <?php foreach($capres as $cap) : ?>
         <div class="col-md-4 mx-auto">

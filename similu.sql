@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2022 at 01:24 PM
+-- Generation Time: Dec 17, 2022 at 08:08 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -73,7 +73,8 @@ CREATE TABLE `suara` (
   `id_suara` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `nama_kandidat` varchar(128) NOT NULL,
-  `tanggal_input` datetime NOT NULL DEFAULT current_timestamp()
+  `tanggal_coblos` date NOT NULL DEFAULT current_timestamp(),
+  `waktu_coblos` time NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -86,7 +87,7 @@ CREATE TABLE `user` (
   `id_masyarakat` int(11) NOT NULL,
   `nama` varchar(128) NOT NULL,
   `nik` varchar(16) NOT NULL,
-  `tanggal_input` date NOT NULL,
+  `tanggal_input` date NOT NULL DEFAULT current_timestamp(),
   `status` int(11) NOT NULL DEFAULT 0,
   `level` enum('admin','masyarakat','bawaslu') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -96,7 +97,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_masyarakat`, `nama`, `nik`, `tanggal_input`, `status`, `level`) VALUES
-(1, 'Alvin Austin', '12210247', '2022-12-01', 0, 'bawaslu'),
+(1, 'Alvin Austin', '12210247', '2022-12-01', 0, 'masyarakat'),
 (2, 'Fadly Faturrohman', '12211208', '2022-12-01', 0, 'masyarakat'),
 (3, 'Raihan Ramadhan', '12211125', '2022-12-01', 0, 'masyarakat'),
 (4, 'Yusup Supriatna', '12210740', '2022-12-01', 0, 'masyarakat'),
@@ -179,13 +180,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `suara`
 --
 ALTER TABLE `suara`
-  MODIFY `id_suara` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_suara` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 
 --
 -- AUTO_INCREMENT for table `visimisi`
