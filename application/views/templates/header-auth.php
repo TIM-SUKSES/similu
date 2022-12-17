@@ -25,12 +25,14 @@
     .btn-top {
       border: solid white;
       color: white;
+      transition: 0.5s ease;
       
     }
 
     a:hover {
       background-color: white;
       color: black;
+      transition: 0.5s ease;
     }
   </style>
   <body>
