@@ -2,7 +2,7 @@
   <?php echo $title; ?>
 
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
       <!-- small box -->
       <div class="small-box bg-aqua">
         <div class="inner">
@@ -11,22 +11,37 @@
           <p>Total Masyarakat</p>
         </div>
         <div class="icon">
-          <i class="ion ion-person"></i>
+          <i class="fa fa-group"></i>
         </div>
         <a href="<?= site_url('admin/DataMasyarakat'); ?>" class="small-box-footer">Selanjutnya <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->
-    <div class="col-md-6">
+    <div class="col-md-4">
       <!-- small box -->
       <div class="small-box bg-green">
         <div class="inner">
           <h3><?= $total_suara; ?></h3>
 
-          <p>Total Pemilih</p>
+          <p>Total Suara</p>
         </div>
         <div class="icon">
           <i class="ion ion-stats-bars"></i>
+        </div>
+        <a href="<?= site_url('admin/suara'); ?>" class="small-box-footer">Selanjutnya <i class="fa fa-arrow-circle-right"></i></a>
+      </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-md-4">
+      <!-- small box -->
+      <div class="small-box bg-purple">
+        <div class="inner">
+          <h3><?= $total_kandidat; ?></h3>
+
+          <p>Total Kandidat</p>
+        </div>
+        <div class="icon">
+          <i class="bi bi-people-fill"></i>
         </div>
         <a href="<?= site_url('admin/suara'); ?>" class="small-box-footer">Selanjutnya <i class="fa fa-arrow-circle-right"></i></a>
       </div>
