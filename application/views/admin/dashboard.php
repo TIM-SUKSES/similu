@@ -43,7 +43,7 @@
         <div class="icon">
           <i class="bi bi-people-fill"></i>
         </div>
-        <a href="<?= site_url('admin/suara'); ?>" class="small-box-footer">Selanjutnya <i class="fa fa-arrow-circle-right"></i></a>
+        <a href="<?= site_url('admin/DataPresiden'); ?>" class="small-box-footer">Selanjutnya <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
   </div>
