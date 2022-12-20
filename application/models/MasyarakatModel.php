@@ -13,10 +13,10 @@ class MasyarakatModel extends CI_Model{
     $data = [
       'nama' => $this->input->post('nama', true),
       'nik' => $this->input->post('nik', true),
+      'password' => password_hash($this->input->post('password', true), PASSWORD_DEFAULT),
       'level' => $this->input->post('level', true)
     ];
-
-    $this->db->insert('user',$data);
+    $this->db->insert('user', $data);
   }
   
   public function update()
@@ -24,6 +24,7 @@ class MasyarakatModel extends CI_Model{
     $data = [
       'nama' => $this->input->post('nama', true),
       'nik' => $this->input->post('nik', true),
+      'password' => password_hash($this->input->post('password', true), PASSWORD_DEFAULT),
       'level' => $this->input->post('level', true)
     ];
     $this->db->where('id_masyarakat', $this->input->post('id_masyarakat'));

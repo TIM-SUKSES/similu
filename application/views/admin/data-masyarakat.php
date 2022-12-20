@@ -15,6 +15,7 @@
                   <th>No.</th>
                   <th>Nama</th>
                   <th>NIK</th>
+                  <th>Password</th>
                   <th>Tanggal Input</th>
                   <th>Role</th>
                   <th>Action</th>
@@ -26,6 +27,7 @@
                             <td><?php echo $id_masyarakat++ ?></td>
                             <td><?php echo $table->nama ?></td>
                             <td><?php echo $table->nik ?></td>
+                            <td><?php echo $table->password ?></td>
                             <td><?php echo $table->tanggal_input ?></td>
                             <td><?php echo $table->level ?></td>
                             <td>
