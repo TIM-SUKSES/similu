@@ -15,7 +15,7 @@ class Home extends CI_Controller
 
   public function index()
   {
-    $data['title'] = 'Home';
+    $data['title'] = 'SIMILU';
     $data['capres'] = $this->db->get('capres')->result();
     $data['capres1'] = $this->db->get_where('suara', ['nama_kandidat' => 'CAPRES NO. 1'])->num_rows();
     $data['capres2'] = $this->db->get_where('suara', ['nama_kandidat' => 'CAPRES NO. 2'])->num_rows();
@@ -27,7 +27,7 @@ class Home extends CI_Controller
   
   public function visimisi($id_kandidat)
   {
-    $data['title'] = 'Visi & Misi';
+    $data['title'] = 'Visi & Misi | SIMILU';
     $data['capres'] = $this->db->get_where('capres', ['id_calon' => $id_kandidat])->row();
     $data['visimisi'] = $this->db->get_where('visimisi', ['id_kandidat' => $id_kandidat])->row();
     $this->load->view('templates/header-visimisi', $data);
@@ -52,7 +52,7 @@ class Home extends CI_Controller
   public function UbahPassword()
   {
     // $this->HomeModel->ubahPassword();
-    $data['title'] = 'Ubah Password';
+    $data['title'] = 'Ubah Password | SIMILU';
     $data['user'] = $this->db->get_where('user', ['nik' => $this->session->userdata('nik')])->row_array();
 
     $this->form_validation->set_rules('password', 'Password Lama', 'required|trim');

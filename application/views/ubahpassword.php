@@ -1,5 +1,5 @@
 <section class="sec1">
-    <h1 class="display-4 text-center text-white mb-1 padding-top title-home"><?php echo $title; ?></h1>
+    <h1 class="display-4 text-center text-white mb-1 padding-top title-home">Ubah Password</h1>
     <div class="container">
         <div class="box-header" style="padding-top: 60px; width: 350px; margin: auto;">
             <?php echo $this->session->flashdata('message'); ?>
