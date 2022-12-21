@@ -25,6 +25,9 @@ class Auth extends CI_Controller{
                     $this->session->set_userdata($data_session);
                     redirect("admin/dashboard");
                 } else {
+                    echo "<script>
+                    alert('Harap ubah password anda pada menu pengaturan!');
+                    </script>";
                     $data_session = [
                          'id_masyarakat' => $cek_nik->id_masyarakat,
                          'nama' => $cek_nik->nama,

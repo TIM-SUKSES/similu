@@ -23,20 +23,26 @@
       </div>
       <div class="modal-body">
         <form action="<?php echo site_url('auth/login'); ?>" method="post">
-            <div class="form-group">
-                <label for="nik" class="text-secondary">NIK *</label>
-                <input type="text" name="nik" id="nik" class="form-control" placeholder="Masukkan NIK Anda" required>
-            </div>
-            <div class="form-group">
-                <label for="password" class="text-secondary">PASSWORD *</label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan Password Anda" required>
-            </div>
-            <button type="submit" class="btn btn-danger"> <i class="fa fa-sign-in"></i> Login / Masuk </button>
-        </form>
-      </div>
-    
+          <div class="form-group">
+            <label for="nik" class="text-secondary">NIK *</label>
+            <input type="text" name="nik" id="nik" class="form-control" placeholder="Masukkan NIK Anda" required>
+          </div>
+          <div class="form-group">
+            <label for="password" class="text-secondary">PASSWORD *</label>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan Password Anda" required>
+          </div>
+            <button onclick="peringatan()" type="submit" class="btn btn-danger"> <i class="fa fa-sign-in"></i> Login / Masuk </button>
+            <script>
+              function peringatan(){
+              alert('Harap ubah password anda pada menu pengaturan!');
+              }
+            </script>
+          </form>
+        </div>
       <div class="modal-footer">
-
+        <section>
+          <p class="text-right mt-3" style="font-size: 14.5px;">Password belum diganti? <br> gunakan password <b class="text-danger"><u>pemilu2024</u></b> </p>
+        </section>
       </div>
     </div>
   </div>
