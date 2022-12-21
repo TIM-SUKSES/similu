@@ -27,9 +27,14 @@
                 <label for="nik" class="text-secondary">NIK *</label>
                 <input type="text" name="nik" id="nik" class="form-control" placeholder="Masukkan NIK Anda" required>
             </div>
+            <div class="form-group">
+                <label for="password" class="text-secondary">PASSWORD *</label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Masukkan Password Anda" required>
+            </div>
             <button type="submit" class="btn btn-danger"> <i class="fa fa-sign-in"></i> Login / Masuk </button>
         </form>
       </div>
+    
       <div class="modal-footer">
 
       </div>

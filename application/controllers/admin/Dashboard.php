@@ -11,7 +11,7 @@ class Dashboard extends CI_Controller{
     }
     public function index(){
         $data['title'] = 'Dashboard';
-        $data['total_user'] = $this->db->get_where('user', ['level' => 'masyarakat'])->num_rows();
+        $data['total_user'] = $this->db->get_where('user', ['level' => 'pemilih'])->num_rows();
         $data['total_suara'] = $this->db->get('suara')->num_rows();
         $data['capres1'] = $this->db->get_where('suara', ['nama_kandidat' => 'CAPRES NO. 1'])->num_rows();
         $data['capres2'] = $this->db->get_where('suara', ['nama_kandidat' => 'CAPRES NO. 2'])->num_rows();

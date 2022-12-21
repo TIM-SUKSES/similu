@@ -22,20 +22,19 @@ class Datamasyarakat extends CI_Controller{
 
     #Function Data Masyarakat
     public function tambah(){
-        $data['title'] = 'Tambah Data Masyarakat';
-        $data['roles'] = $this->MasyarakatModel->getRoles()->result_array();
-        $this->load->view('templates/admin_header' , $data);
-        $this->load->view('templates/admin_topbar');
-        $this->load->view('templates/admin_sidebar');
-        $this->load->view('admin/tambah-masyarakat', $data);
-        $this->load->view('templates/admin_footer');
+            $data['title'] = 'Tambah Data Masyarakat';
+            $data['roles'] = $this->MasyarakatModel->getRoles()->result_array();
+            $this->load->view('templates/admin_header', $data);
+            $this->load->view('templates/admin_topbar');
+            $this->load->view('templates/admin_sidebar');
+            $this->load->view('admin/tambah-masyarakat', $data);
+            $this->load->view('templates/admin_footer');
     }
 
     public function edit($id_masyarakat){
         $data['title'] = 'Edit Data Masyarakat';
         $data['row'] = $this->db->get_where('user', ['id_masyarakat' => $id_masyarakat])->row();
         $data['roles'] = $this->MasyarakatModel->getRoles()->result_array();
-
         $this->load->view('templates/admin_header' , $data);
         $this->load->view('templates/admin_topbar');
         $this->load->view('templates/admin_sidebar');

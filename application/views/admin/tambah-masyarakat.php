@@ -27,6 +27,14 @@
               </div>
             </td>
           </tr>
+          <tr> 
+            <td>
+              <div class="form-group">
+                <label for="password">PASSWORD <span class="text-danger">*</span></label>
+                <input type="text" name="password" id="password" class="form-control" placeholder="Masukkan password" required>
+              </div>
+            </td>
+          </tr>
           <tr>
             <td>
               <div class="form-group">

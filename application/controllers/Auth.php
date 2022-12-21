@@ -13,9 +13,8 @@ class Auth extends CI_Controller{
 
     public function login(){
         $cek_nik = $this->db->get_where('user', ['nik' => $this->input->post('nik', true)])->row();
-
         if ($cek_nik){
-            if($this->input->post('nik')){
+            if(password_verify($this->input->post('password'), $cek_nik->password)){
                 if ($cek_nik->level == 'admin'){
                     $data_session = [
                          'id_masyarakat' => $cek_nik->id_masyarakat,
@@ -23,7 +22,6 @@ class Auth extends CI_Controller{
                          'tanggal_input' => $cek_nik->tanggal_input,
                          'level' => $cek_nik->level,
                      ];
-                    
                     $this->session->set_userdata($data_session);
                     redirect("admin/dashboard");
                 } else {
@@ -32,15 +30,14 @@ class Auth extends CI_Controller{
                          'nama' => $cek_nik->nama,
                          'tanggal_input' => $cek_nik->tanggal_input,
                          'level' => $cek_nik->level,
-                     ];
-                
+                    ];
                     $this->session->set_userdata($data_session);
                     redirect("home");
                 }
 
             }else { 
                 echo "<script>
-                alert('NIK anda tidak terdaftar!');
+                alert('password anda salah!');
                 window.location.href = `" . site_url('auth') . "`;
                 </script>";
                }
