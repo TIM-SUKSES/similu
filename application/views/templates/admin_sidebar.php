@@ -22,7 +22,7 @@
         </li>
         <li class="<?php echo $this->uri->segment(2) == 'DataMasyarakat' ? 'active' : '' ?> ">
           <a href="<?php echo site_url('admin/DataMasyarakat'); ?>">
-            <i class="fa fa-group"></i> <span>Data Masyarakat</span>
+            <i class="fa fa-group"></i> <span>Data User</span>
           </a>
         </li>
         <li class="<?php echo $this->uri->segment(2) == 'DataPresiden' ? 'active' : '' ?> ">

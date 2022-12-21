@@ -8,7 +8,7 @@
         <div class="inner">
           <h3><?= $total_user; ?></h3>
 
-          <p>Total Masyarakat</p>
+          <p>Total User</p>
         </div>
         <div class="icon">
           <i class="fa fa-group"></i>
@@ -38,7 +38,7 @@
         <div class="inner">
           <h3><?= $total_kandidat; ?></h3>
 
-          <p>Total Kandidat</p>
+          <p>Jumlah Kandidat</p>
         </div>
         <div class="icon">
           <i class="bi bi-people-fill"></i>

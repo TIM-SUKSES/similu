@@ -5,7 +5,7 @@
 <div class="box">
             <div class="box-header">
                 <?= $this->session->flashdata('message'); ?>
-                <a href="<?php echo site_url('admin/DataMasyarakat/tambah') ?>" class="btn bg-red"><i class="fa fa-plus-circle"> Tambah Data Masyarakat </i></a>
+                <a href="<?php echo site_url('admin/DataMasyarakat/tambah') ?>" class="btn bg-red"><i class="fa fa-plus-circle"> Tambah Data User </i></a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
