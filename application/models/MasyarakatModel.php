@@ -30,6 +30,7 @@ class MasyarakatModel extends CI_Model{
     $this->db->where('id_masyarakat', $this->input->post('id_masyarakat'));
     $this->db->update('user', $data);
   }
+
 }
 
 ?>

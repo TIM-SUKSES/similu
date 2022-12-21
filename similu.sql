@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 20, 2022 at 12:38 PM
+-- Generation Time: Dec 21, 2022 at 07:45 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -59,7 +59,7 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id_roles`, `nama_roles`) VALUES
-(1, 'masyarakat'),
+(1, 'pemilih'),
 (2, 'admin');
 
 -- --------------------------------------------------------
@@ -76,14 +76,6 @@ CREATE TABLE `suara` (
   `waktu_coblos` time NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `suara`
---
-
-INSERT INTO `suara` (`id_suara`, `id_user`, `nama_kandidat`, `tanggal_coblos`, `waktu_coblos`) VALUES
-(13, 1, 'CAPRES NO. 1', '2022-12-19', '16:03:41'),
-(14, 5, 'CAPRES NO. 2', '2022-12-19', '16:33:36');
-
 -- --------------------------------------------------------
 
 --
@@ -96,7 +88,7 @@ CREATE TABLE `user` (
   `nik` varchar(16) NOT NULL,
   `password` varchar(255) NOT NULL,
   `tanggal_input` date NOT NULL DEFAULT current_timestamp(),
-  `level` enum('masyarakat','admin') NOT NULL,
+  `level` enum('pemilih','admin') NOT NULL,
   `status` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -105,10 +97,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_masyarakat`, `nama`, `nik`, `password`, `tanggal_input`, `level`, `status`) VALUES
-(2, 'Lia Eden', '007', '$2y$10$1T2EhSgEuQVtgaqKRnWPYOE7hVQNYvXyjwRQl78L2Byrq21osccaW', '2022-12-20', 'admin', 0),
-(15, 'Alvin Austin', '12210247', '$2y$10$Ly6nRN1eJN0bkZzWabKLUuE8UK/QtYXyYs.JoobsoxfZ0TATHMvji', '2022-12-20', 'masyarakat', 0),
-(17, 'bawaslu', '081294684656', '$2y$10$F2holi6tayhKvfduRCHGOOzZCECxI.aoF3v5lePjjFula6FB77mPe', '2022-12-20', 'admin', 0),
-(18, 'pitek', '221', '$2y$10$AbyjCOKGWWrbWaPoqTrQuu/flWh5SNc9CUnDuQL5ytV8mqNvwZhfS', '2022-12-20', 'masyarakat', 0);
+(2, 'Lia Eden', '007', '$2y$10$kkAUZwTdHjWWfn.O/EqFUueuCeVvKqzz65Li5d7r7yE10mPjxuNVq', '2022-12-20', 'admin', 0),
+(20, 'Alvin Austin', '12210247', '$2y$10$NRTv0TgTPkln3PRyV4c11ueKwzjtVA8X21lAZvEfSkt0yyGD3Kzr6', '2022-12-20', 'pemilih', 0),
+(23, 'Nabil Muthi Maulani', '12210365', '$2y$10$kqOvttKwfnnCVUciksqV7OSpIhK3fFX1vOEmEFMjP0wTwlLTxWlyC', '2022-12-21', 'pemilih', 0),
+(24, 'Raihan Ramadhan', '12211125', '$2y$10$CWg6XxrIRiNiSdhqZvVBpuq6AokVLXMFGNg6MrRtBDpOCOzlfJ7Um', '2022-12-21', 'pemilih', 0),
+(25, 'Yusup Supriatna', '12210740', '$2y$10$BnnBYU8dByCd2gVHJI9MQO/6t2t93hNO6Zh2.cxymrPt72MXyevYe', '2022-12-21', 'pemilih', 0),
+(26, 'Fadly Faturrohman', '12211208', '$2y$10$DCx0yBaywHEo/KciAhc2ROd/54LwM/2LE7QguexTB/mmgD.5ni91.', '2022-12-21', 'pemilih', 0);
 
 -- --------------------------------------------------------
 
@@ -186,13 +180,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `suara`
 --
 ALTER TABLE `suara`
-  MODIFY `id_suara` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_suara` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_masyarakat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `visimisi`

@@ -73,17 +73,17 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link nav-active active" href="#">Home</a>
+                <a class="nav-link nav-active active" href="<?php echo site_url('home'); ?>">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link nav-active" href="#sec2">Pemilihan Suara</a>
+                <a class="nav-link nav-active" href="<?php echo site_url('home/#sec2'); ?>">Pemilihan Suara</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fa fa-user"></i> <?php echo $this->session->userdata('nama');  ?>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="<?php echo site_url('home/UbahPassword') ?>"><i class="fa fa-gear"> </i> Pengaturan</a>
+                  <a class="dropdown-item" href="<?php echo site_url('home/ubahPassword') ?>"><i class="fa fa-gear"> </i> Pengaturan</a>
                   <a class="dropdown-item" href="<?php echo site_url('auth/logout') ?>"><i class="fa fa-sign-out"> </i> Keluar</a>
                 </div>
               </li>
