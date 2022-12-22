@@ -20,8 +20,8 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
-        <li class="<?php echo $this->uri->segment(2) == 'DataMasyarakat' ? 'active' : '' ?> ">
-          <a href="<?php echo site_url('admin/DataMasyarakat'); ?>">
+        <li class="<?php echo $this->uri->segment(2) == 'DataUser' ? 'active' : '' ?> ">
+          <a href="<?php echo site_url('admin/DataUser'); ?>">
             <i class="fa fa-group"></i> <span>Data User</span>
           </a>
         </li>

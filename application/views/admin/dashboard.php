@@ -13,7 +13,7 @@
         <div class="icon">
           <i class="fa fa-group"></i>
         </div>
-        <a href="<?= site_url('admin/DataMasyarakat'); ?>" class="small-box-footer">Selanjutnya <i class="fa fa-arrow-circle-right"></i></a>
+        <a href="<?= site_url('admin/DataUser'); ?>" class="small-box-footer">Selanjutnya <i class="fa fa-arrow-circle-right"></i></a>
       </div>
     </div>
     <!-- ./col -->
